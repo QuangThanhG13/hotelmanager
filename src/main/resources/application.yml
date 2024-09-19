@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: HotelManagement
+
+  datasource:
+    url: jdbc:mariadb://localhost:3306/newspringboot1
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password:
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.MysqlDialect
+    properties:
+      hibernate:
+        format_sql: true
+  messages:
+    basename: messages
+    encoding: UTF-8
+    always-use-message-format: false
+    cache-duration:
+    fallback-to-system-locale: true
+    use-code-as-default-message: false
+
+#security:
+#  oauth2:
+#    resourceserver:
+#      jwt:
+#        issuer-uri: http://localhost:8080/realms/SpringBootDemoKeyCloak
+#        jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
+
+#jwt:
+#  auth:
+#    converter:
+#      resource-id: springboot-keycloak-demo-client
+#      principal-attribute: preferred_username
+#
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: INFO
+
+server:
+  port: 8087
